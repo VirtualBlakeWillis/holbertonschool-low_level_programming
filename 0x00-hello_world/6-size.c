@@ -5,7 +5,7 @@
   *
   *Return: 0
   */
-init main(void)
+int main(void)
 {
 	printf("Size of a char: %d\n", sizeof(char));
 	printf("Size of an int: %d\n", sizeof(int));
