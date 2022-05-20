@@ -8,9 +8,7 @@
   */
 int main(void)
 {
-	char tmp[] = "with proper grammar, but the outcome is a piece of art,";
-
-	printf(tmp);
+	printf("with proper grammar, but the outcome is a piece of art,");
 
 	return (0);
 }
