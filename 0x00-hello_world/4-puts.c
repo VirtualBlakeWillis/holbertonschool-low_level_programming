@@ -10,4 +10,5 @@ int main(void)
 
 	puts(outputStr);
 
+	return (0);
 }
