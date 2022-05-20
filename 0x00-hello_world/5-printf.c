@@ -10,6 +10,7 @@ int main(void)
 {
 	char tmp[] = "with proper grammar, but the outcome is a piece of art,";
 
-	printf($tmp);
+	printf(tmp);
+
 	return (0);
 }
