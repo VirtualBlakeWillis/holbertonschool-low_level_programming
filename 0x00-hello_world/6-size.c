@@ -1,4 +1,4 @@
-#include <studio.h>
+#include <stdio.h>
 #include <string.h>
 /**
   *main - prints size of data types for system running program
