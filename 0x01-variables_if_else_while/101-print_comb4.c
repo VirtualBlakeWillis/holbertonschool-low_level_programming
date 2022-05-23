@@ -19,7 +19,7 @@ int main(void)
 					putchar(i);
 					putchar(x);
 					putchar(z);
-					if ( i != '7')
+					if (i != '7')
 					{
 						putchar(',');
 						putchar(' ');
