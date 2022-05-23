@@ -6,7 +6,7 @@
   */
 int main(void)
 {
-	int i, x, inasc_one, inasc_two, comma, space;
+	int i, x, inasc_one, inasc_two;
 
 	for (i = 0; i < 10; i++)
 	{
