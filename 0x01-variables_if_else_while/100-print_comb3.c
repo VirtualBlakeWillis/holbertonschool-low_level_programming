@@ -10,16 +10,16 @@ int main(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		if (i != 9)
+		for(x = 0; x < 10; x++)
 		{
-			for(x = 0; x < 10; x++)
+			if (x != i && x > i)
 			{
-				if (x != i && x > i )
+				inasc_one = i + 48;
+				inasc_two = x + 48;
+				putchar(inasc_one);
+				putchar(inasc_two);	
+				if (!((i == 8) && (x == 9)))
 				{
-					inasc_one = i + 48;
-					inasc_two = x + 48;
-					putchar(inasc_one);
-					putchar(inasc_two);	
 					putchar(',');
 					putchar(' ');
 				}
