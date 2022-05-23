@@ -3,14 +3,14 @@
 /**
   * main - print alphabet, then newline char
   *
-  * return: return 0
+  * Return: return 0
   */
 int main(void)
 {
 	int i;
 	char x;
 
-	for (i = 97;i < 123; i++)
+	for (i = 97; i < 123; i++)
 	{
 		x = i;
 		putchar(x);
