@@ -1,8 +1,13 @@
 #include "main.h"
 /**
-  * func_def = 
+  * _abs - return absolute value of int
+  *@x: input value
+  * Return: input value as an absolute value
   */
-int _abs(int)
+int _abs(int x)
 {
-	return (
+	if (x > 0)
+		return (x);
+	else
+		return (x * -1);
 }
