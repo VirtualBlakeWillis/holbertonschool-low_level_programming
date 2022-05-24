@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-`  * print_to_98 - print all real numbers between input and 98
+  * print_to_98 - print all real numbers between input and 98
   *@n: input
   *Return: void
   */
