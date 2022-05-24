@@ -5,6 +5,4 @@
   *Return: int 1 + int 2
   */
 int add(int a, int b)
-{
-	return(a + b);
-}
+	return (a + b);
