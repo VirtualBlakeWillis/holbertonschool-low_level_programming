@@ -18,6 +18,8 @@ void times_table(void)
 				_putchar((val / 10) + '0');
 				_putchar((val % 10) + '0');
 			}
+			else if (y == 0)
+				_putchar(val + '0');
 			else
 			{
 				_putchar(' ');
