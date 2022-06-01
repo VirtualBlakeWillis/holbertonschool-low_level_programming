@@ -4,11 +4,11 @@
   * Return: int
   */
 
-int _strlen(char *s);
+int _strlen(char *s)
 {
-	int i[];
-	for (i = &s; i >= 0; i--;)
-	{
-		
-	}
+	int i = 0;
+
+	while (*s++)
+		i++;
+	return (i);
 }
