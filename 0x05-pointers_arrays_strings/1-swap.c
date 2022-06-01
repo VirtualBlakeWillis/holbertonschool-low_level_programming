@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
   * swap_int - swaps input a's value with input b's value
   * @a: input a

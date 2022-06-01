@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
   * _puts - takes input string, returns it to stdout using _putchar
   * @str: input string
