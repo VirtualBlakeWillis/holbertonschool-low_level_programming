@@ -1,6 +1,6 @@
 /**
   * reset_to_98 - updates value of inputted address to "98"
-  * @n - address of int
+  * @n: address of int
   * Return: void
   */
 
