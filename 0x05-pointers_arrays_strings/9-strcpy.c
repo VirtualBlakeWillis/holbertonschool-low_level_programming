@@ -3,7 +3,7 @@
   * _strcpy - copies the string pointed to by src
   * to the buffer pointed to by dest.
   * @dest: buffer
-  * @src pointer
+  * @src: pointer
   * Return: void
   */
 
