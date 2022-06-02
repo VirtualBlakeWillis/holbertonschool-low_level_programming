@@ -10,34 +10,22 @@
 void rev_string(char *s)
 {
 
-	int i, n;
-	
+	char tmp[512];
+	int i, j;
+
 	i = 0;
-	n = 0;
-
-	while (*s++)
-		i++;
-	
-	char x[i];
-
-
-
-
-	/* reverse string code */
-	while (*s)
+	j = 0;
+	while (*(s+i))
 	{
-		_putchar(*s);
+		*(tmp+i) = *(s+i);
 		i++;
 	}
+	i--;
 
-	s--;
-
-	while (i > 0)
+	while (i >= 0)
 	{
-		x[n] = s[i];
-		n++;
+		*(s+i) = *(tmp+j);
+		j++;
 		i--;
-		s--;
 	}
-	_putchar('\n');
 }
