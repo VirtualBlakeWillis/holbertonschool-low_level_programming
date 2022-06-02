@@ -19,6 +19,8 @@ void puts_half(char *str)
 	c = i / 2;
 	while(c < i)
 	{
+		if (*(str + c) == '\0')
+			break
 		_putchar(*(str + c));
 		c++;
 	}
