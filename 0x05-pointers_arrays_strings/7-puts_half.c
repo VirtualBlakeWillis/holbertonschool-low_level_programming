@@ -15,9 +15,9 @@ void puts_half(char *str)
 	i = _strlen(str);
 
 	if (i % 2 == 1)
-		i--;
+		i++;
 	c = i / 2;
-	while(c <= i)
+	while(c < i)
 	{
 		_putchar(*(str + c));
 		c++;
