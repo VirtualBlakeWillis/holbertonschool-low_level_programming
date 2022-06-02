@@ -20,7 +20,7 @@ void puts_half(char *str)
 	while(c < i)
 	{
 		if (*(str + c) == '\0')
-			break
+			break;
 		_putchar(*(str + c));
 		c++;
 	}
