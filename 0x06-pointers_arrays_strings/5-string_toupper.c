@@ -1,13 +1,15 @@
 #include "holberton.h"
 
 /**
-  *
+  * string_toupper - capitalize every letter in str
+  * @str: string to uppercase
+  * Return: pointer to str
   */
 
 char *string_toupper(char *str)
 {
 	int str_len = _strlen(str), i;
-	
+
 	for (i = 0; i < str_len; i++)
 	{
 		if (str[i] >= 97 && str[i] <= 122)
@@ -24,6 +26,7 @@ char *string_toupper(char *str)
 int _strlen(char *s)
 {
 	int i = 0;
+
 	while (*s++)
 		i++;
 	return (i);
