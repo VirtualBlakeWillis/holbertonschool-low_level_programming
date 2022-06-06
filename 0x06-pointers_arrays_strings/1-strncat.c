@@ -28,8 +28,10 @@ char *_strncat(char *dest, char *src, int n)
 int _strlen(char *s)
 {
 	int i = 0;
+
 	while (*s++)
 		i++;
+
 	return (i);
 }
 

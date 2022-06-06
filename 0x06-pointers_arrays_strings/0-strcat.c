@@ -8,7 +8,7 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int dest_len = _strlen(dest);	
+	int dest_len = _strlen(dest);
 	int i;
 
 	for (i = 0; src[i] != '\0'; i++)
@@ -23,11 +23,13 @@ char *_strcat(char *dest, char *src)
  * _strlen - gets legnth of string
  * @s: string to get legnth of
  * Return: int
- */ 
+ */
 int _strlen(char *s)
 {
 	int i = 0;
+
 	while (*s++)
 		i++;
+
 	return (i);
 }
