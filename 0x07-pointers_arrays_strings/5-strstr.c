@@ -26,7 +26,7 @@ char *_strstr(char *hak, char *ned)
 					x++;
 			}
 			if (hak[i + x] == ned[x])
-				return (&hak[i - 1]);
+				return (&hak[i]);
 		}
 		
 	}
