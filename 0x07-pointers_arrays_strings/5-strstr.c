@@ -30,5 +30,7 @@ char *_strstr(char *hak, char *ned)
 		}
 		
 	}
-	return (&hak[i]);
+
+	return (NULL);
 }
+
