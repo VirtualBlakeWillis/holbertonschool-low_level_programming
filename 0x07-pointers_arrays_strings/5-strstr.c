@@ -9,11 +9,12 @@
 
 char *_strstr(char *hak, char *ned)
 {
-	unsigned int i = 0;
+	int i;
 	int x;
 
 	for (i = 0; hak[i] != '\0'; i++)
 	{
+		
 		if (hak[i] == ned[0])
 		{
 			x = 0;
@@ -25,9 +26,9 @@ char *_strstr(char *hak, char *ned)
 					x++;
 			}
 			if (hak[i + x] == ned[x])
-				return (&hak[i]);
+				return (&hak[i - 1]);
 		}
+		
 	}
-
 	return (&hak[i]);
 }
