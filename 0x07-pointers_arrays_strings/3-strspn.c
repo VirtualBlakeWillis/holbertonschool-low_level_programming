@@ -5,13 +5,13 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	int esc = 0;
-	int x = 0;
+	int x;
 	unsigned int i = 0;
 
 	while (esc == 0)
 	{
-		for (x = 0; accept[x] != '\0' ; x++)
-		{
+		x = 0;
+		do {
 			if (accept[x] == s[i])
 			{
 				i++;
@@ -21,8 +21,8 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				esc = 1;
 			}
-
-		}
+			x++;
+		} while (accept[x] != '\0');
 	}
 	return (i);
 }
