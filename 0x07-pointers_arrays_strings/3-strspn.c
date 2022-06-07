@@ -1,5 +1,8 @@
 /**
-  *
+  * _strspn - returns number of bytes of s, which consist only of accpet bytes
+  * @accept: array of bytes to check against
+  * @s: array to check each char if it is in accept
+  * Return: @ of bytes in s that are the same as accept
   */
 
 unsigned int _strspn(char *s, char *accept)
