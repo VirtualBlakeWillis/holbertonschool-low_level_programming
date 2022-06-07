@@ -1,7 +1,10 @@
 #include "main.h"
 #include <stddef.h>
 /**
-  *
+  * _strstr - return address of first val in ned, if all of ned is in hak
+  * @hak: haystack, aka str 1 to check against
+  * @ned: needle, aka str 2 to check if in str1
+  * Return: address for hak, or NULL
   */
 
 char *_strstr(char *hak, char *ned)
@@ -13,41 +16,19 @@ char *_strstr(char *hak, char *ned)
 	{
 		if (hak[i] == ned[0])
 		{
-	
-			for (x = 0; ned[x] != '\0'; x++)
+			x = 0;
+			while (ned[x] != '\0')	
 			{
 				if (hak[i + x] != ned[x])
 					break;
+				else
+					x++;
 			}
-		 	
 			if (hak[i + x] == ned[x])
-				return (&hak[i - x]);
+				return (&hak[i]);
 		}
-
 		i++;
 	}
+
 	return (NULL);
 }
-
-
-/*		
-		if (haystack[i] == needle[0])
-		{
-			startLoc = &haystack[i];
-
-			for (x = 0; needle[x] != '\0'; x++)
-			{
-				if (haystack[i + x] != needle[x])
-					break;
-			}
-
-			if (haystack[i + x] == needle[x])
-			{
-				out = 1;
-				break;
-			}
-			startLoc = &haystack[0];
-		}
-		if (out == 1)
-			break;
-*/	
