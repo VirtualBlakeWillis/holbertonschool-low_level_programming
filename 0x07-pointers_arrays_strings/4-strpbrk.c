@@ -1,4 +1,3 @@
-#include <stddef.h>
 /**
   * _strpbrk - return pointer to first byte in s that is also a byte in accept
   * @s: main pointer/array
@@ -28,7 +27,7 @@ char *_strpbrk(char *s, char *accept)
 	}
 
 	if (s[i] == '\0')
-		return (NULL);
+		return ('\0');
 	else
 		return (s + i);
 }
