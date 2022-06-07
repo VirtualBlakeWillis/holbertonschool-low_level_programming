@@ -12,7 +12,7 @@ char *_strstr(char *hak, char *ned)
 	unsigned int i = 0;
 	int x;
 
-	while (hak[i] != '\0')
+	for (i = 0; hak[i] != '\0'; i++)
 	{
 		if (hak[i] == ned[0])
 		{
@@ -27,8 +27,7 @@ char *_strstr(char *hak, char *ned)
 			if (hak[i + x] == ned[x])
 				return (&hak[i]);
 		}
-		i++;
 	}
 
-	return (NULL);
+	return (&hak[i]);
 }
