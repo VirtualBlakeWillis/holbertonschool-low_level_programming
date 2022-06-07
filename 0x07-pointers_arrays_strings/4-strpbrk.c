@@ -1,6 +1,9 @@
 /**
-  *
-  */
+  * _strpbrk - return pointer to first byte in s that is also a byte in accept
+  * @s: main pointer/array
+  * @accept: check against pointer/array
+  * Return: pointer to s byte, or NULL
+ */
 
 char *_strpbrk(char *s, char *accept)
 {
@@ -20,10 +23,8 @@ char *_strpbrk(char *s, char *accept)
 		}
 		if (out == 1)
 			break;
-		else
-			i++;
+		i++;
 	}
-	
 
 	if (s[i] == '\0')
 		return ('\0');
