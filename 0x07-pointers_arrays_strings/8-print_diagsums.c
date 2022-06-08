@@ -1,6 +1,9 @@
 #include <stdio.h>
 /**
-  *
+  * print_diagsums - print sums of diagnals of square matrix
+  * @a: array
+  * @size: square array where size = size x size
+  * Return: void
   */
 
 void print_diagsums(int *a, int size)
