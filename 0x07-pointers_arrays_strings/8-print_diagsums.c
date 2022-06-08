@@ -5,21 +5,22 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i, x;
+	int i;
 	unsigned long diag1 = 0, diag2 = 0;
-	int tmp = 0;
 
 	for (i = 0; i < size; i++)
 	{
-		tmp = (i * 3) + i;
-		diag1 += *(a + tmp);
+		diag1 += a[i];
+		a += size;
 	}
 
-	for (x = 0; x < size; x++)
+	a -= size;
+
+	for (i = 0; i < size; i++)
+	/* a[0,2] a[1,1] a[2,0] -> a + 2, a + 4, a + 8 */
 	{
-		tmp = (x * 3) + i;
-		diag2 += *(a + tmp);
-			i--;
+		diag2 += a[i];
+		a -= size;
 	}
 
 	printf("%ld, %ld\n", diag1, diag2);
