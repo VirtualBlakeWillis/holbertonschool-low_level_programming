@@ -1,6 +1,9 @@
 #include "main.h"
 
 /**
+  * _puts_recursion - use putchar in a recursive function
+  * @s: string to putchar out
+  * Return: void
   */
 
 void _puts_recursion(char *s)
