@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-  * returns the value of x raised to the power of y
+  * _pow_recursion - returns the value of x raised to the power of y
   * @x: what we multiply
-  * y: how many times we multiply x by itself
+  * @y: how many times we multiply x by itself
   * Return: x^y
   */
 
