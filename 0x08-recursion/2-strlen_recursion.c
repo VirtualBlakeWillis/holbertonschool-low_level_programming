@@ -1,5 +1,8 @@
 #include "main.h"
 /**
+  * _strlen_recursion - get legnth of string, recursivly!
+  * @s: string
+  * Return: legnth of string
   */
 
 int _strlen_recursion(char *s)
