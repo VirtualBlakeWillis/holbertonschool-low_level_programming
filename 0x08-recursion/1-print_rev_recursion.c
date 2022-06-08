@@ -9,21 +9,23 @@ void _print_rev_recursion(char *s)
 
 	if (!*s)
 	{
-		_putchar(*s);
-		end = 1;
+		return;
 	}
 
-	if (end == 0)
-	{
-		s++;
-		_putchar(*s);
-		_print_rev_recursion(s);
-	}
-	else
-	{
-		s--;
-		_putchar(*s);
-		
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
