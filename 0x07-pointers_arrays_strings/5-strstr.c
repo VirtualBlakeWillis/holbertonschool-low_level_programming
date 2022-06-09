@@ -13,7 +13,7 @@
 
 char *_strstr(char *hay, char *ned)
 {
-	int i, x;
+	int i, x = 0;
 
 	for (i = 0; hay[i] != '\0'; i++)
 	{
@@ -26,7 +26,7 @@ char *_strstr(char *hay, char *ned)
 			}
 		}
 		if (hay[i + x] == ned[x])
-			return (hay + i);
+			return (&hay[i]);
 	}
 	return ('\0');
 }
