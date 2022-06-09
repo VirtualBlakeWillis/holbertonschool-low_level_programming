@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
   * cap_string - capitalize all words of a string (that meet criteria)
-  * @s - input string
+  * @str: input string
   * Return: pointer to s
   */
 
