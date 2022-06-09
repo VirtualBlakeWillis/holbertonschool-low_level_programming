@@ -6,11 +6,6 @@
   * @ned: needle, aka str 2 to check if in str1
   * Return: address for hak, or NULL
   */
-#include <stddef.h>
-/**
-  *
-  */
-
 char *_strstr(char *hay, char *ned)
 {
 	int i, x = 0;
