@@ -15,7 +15,7 @@ char *_strstr(char *hay, char *ned)
 {
 	int i, x;
 
-	for (i = 0; hay[i] != '\0'; ++i)
+	for (i = 0; hay[i] != '\0'; i++)
 	{
 		if (hay[i] == *ned)
 		{
