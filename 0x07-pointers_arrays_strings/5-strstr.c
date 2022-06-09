@@ -27,7 +27,6 @@ char *_strstr(char *hay, char *ned)
 		}
 		if (hay[i + x] == ned[x])
 			break;
-		i++;
 	}
 	return (&hay[i]);
 }
