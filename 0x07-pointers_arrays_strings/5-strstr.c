@@ -9,31 +9,9 @@
 
 char *_strstr(char *hak, char *ned)
 {
-	int hak_len = _strlen(hak);
-	int ned_len = _strlen(ned);
 	int i, x;
-	int *ned_0_in_hak;
-}
 
-/**
-* _strlen - gets length of string
-* @s: string to get length of
-* Return: int
-*/
-int _strlen(char *s)
-{
-	int i = 0;
-	while (*s++)
-		i++;
-	return (i);
-}
-
-/*
-{
-	int i;
-	int x;
-
-	for (i = 0; hak[i] != '\0'; i++)
+	for (i = 0; hak[i] != '\0'; ++i)
 	{
 		
 		if (hak[i] == ned[0])
@@ -52,6 +30,6 @@ int _strlen(char *s)
 		
 	}
 
-	return (NULL);
+	return ('\0');
 }
-*/
+
