@@ -11,34 +11,23 @@
   *
   */
 
-char *_strstr(char *haystack, char *needle)
+char *_strstr(char *hay, char *ned)
 {
-	unsigned int i = 0;
-	int out = 0;
-	int x;
-	while (*haystack)
+	int i, x;
+
+	for (i = 0; hay[i] != '\0'; i++)
 	{
-		if (haystack[i] == needle[0])
+		if (hay[i] == ned[0])
 		{
-			for (x = 0; needle[x] != '\0'; x++)
+			for (x = 0; ned[x] != '\0'; x++)
 			{
-				if (haystack[i + x] != needle[x])
+				if (hay[i + x] != ned[x])
 					break;
 			}
-
-			if (haystack[i + x] == needle[x])
-			{
-				break;
-			}
-
 		}
-		if (out == 1)
+		if (hay[i + x] == ned[x])
 			break;
 		i++;
 	}
-
-	if (*haystack == '\0')
-		return (NULL);
-	else
-		return (&haystack[i]);
+	return (&hay[i]);
 }
