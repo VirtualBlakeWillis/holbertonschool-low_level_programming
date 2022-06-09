@@ -28,10 +28,9 @@ char *_strstr(char *haystack, char *needle)
 
 			if (haystack[i + x] == needle[x])
 			{
-				out = 1;
 				break;
 			}
-			startLoc = &haystack[0];
+
 		}
 		if (out == 1)
 			break;
@@ -41,5 +40,5 @@ char *_strstr(char *haystack, char *needle)
 	if (*haystack == '\0')
 		return (NULL);
 	else
-		return (startLoc);
+		return (&haystack[i]);
 }
