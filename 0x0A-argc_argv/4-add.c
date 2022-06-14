@@ -37,8 +37,8 @@ int main(int argc, char *argv[])
 
 int isLetter(char *input)
 {
-	if ((*input >= 'a' && *input <= 'z') || (*input >= 'A' && *input <= 'Z'))
-		return (1);
+	if ((*input >= 48 && *input <= 57))
+		return (0);
 
-	return (0);
+	return (1);
 }
