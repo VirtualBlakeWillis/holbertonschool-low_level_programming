@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 
 int isNumber(char *input[])
 {
-	if ((*input[0] >= 48 && *input[0] <= 57))
+	if ((*input[0] >= '0' && *input[0] <= '9') || (*input[0] < '0'))
 		return (0);
 
 	return (1);
