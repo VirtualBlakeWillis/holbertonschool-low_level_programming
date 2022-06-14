@@ -11,17 +11,20 @@ int main(int argc, char *argv[])
 {
 	int tempInt = 0, sum = 0, i;
 
-	for (i = 0; i < argc; i++)
+	if (argc > 1)
 	{
-		if (isLetter(argv[i]))
+		for (i = 1; i < argc; ++i)
 		{
-			printf("Error\n");
-			return (1);
-		}
-		else
-		{
-			tempInt = atoi(argv[i]);
-			sum += tempInt;
+			if (isLetter(&argv[i]))
+			{
+				printf("Error\n");
+				return (1);		
+			}
+			else
+			{
+				tempInt = atoi(argv[i]);
+				sum += tempInt;
+			}
 		}
 	}
 
@@ -35,9 +38,9 @@ int main(int argc, char *argv[])
   * Return: 1 if letter, 0 if not
   */
 
-int isLetter(char *input)
+int isLetter(char *input[])
 {
-	if ((*input >= 48 && *input <= 57))
+	if ((*input[0] >= 48 && *input[0] <= 57))
 		return (0);
 
 	return (1);
