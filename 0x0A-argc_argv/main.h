@@ -7,7 +7,7 @@
 #include <ctype.h>
 
 /* Project Prototypes */
-int isLetter(char *input[]);
+int isNumber(char *input[]);
 
 
 #endif

@@ -15,10 +15,10 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; ++i)
 		{
-			if (isLetter(&argv[i]))
+			if (isNumber(&argv[i]))
 			{
 				printf("Error\n");
-				return (1);		
+				return (1);
 			}
 			else
 			{
@@ -33,12 +33,12 @@ int main(int argc, char *argv[])
 }
 
 /**
-  * isLetter - checks if input is a letter
+  * isNumber - checks if input is a number
   * @input: input char
   * Return: 1 if letter, 0 if not
   */
 
-int isLetter(char *input[])
+int isNumber(char *input[])
 {
 	if ((*input[0] >= 48 && *input[0] <= 57))
 		return (0);
