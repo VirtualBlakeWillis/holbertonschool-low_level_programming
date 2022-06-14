@@ -9,9 +9,9 @@
 
 int main(int argc, char *argv[])
 {
-	int tempInt = 0, sum = 0;
+	int tempInt = 0, sum = 0, i;
 
-	for (int i = 0; i < argc; i++)
+	for (i = 0; i < argc; i++)
 	{
 		if (isLetter(argv[i]))
 		{
