@@ -1,10 +1,11 @@
 #ifndef MAIN_H
 #define MAIN_H
-// Standard Libraries
+
+/* Standard Libraries */
 #include <stdio.h>
 #include <stdlib.h>
 
-// Project Prototypes
+/* Project Prototypes */
 
 
 
