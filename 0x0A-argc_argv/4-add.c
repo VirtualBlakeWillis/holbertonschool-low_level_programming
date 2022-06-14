@@ -27,8 +27,13 @@ int main(int argc, char *argv[])
 
 	printf("%d\n", sum);
 	return (EXIT_SUCCESS);
-	
 }
+
+/**
+  * isLetter - checks if input is a letter
+  * @input: input char
+  * Return: 1 if letter, 0 if not
+  */
 
 int isLetter(char *input)
 {
