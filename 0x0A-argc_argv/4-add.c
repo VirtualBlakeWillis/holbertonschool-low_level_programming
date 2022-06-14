@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; ++i)
 		{
-			if (isNumber(&argv[i]))
+			if (isNumber(&argv[i]) == 1)
 			{
 				printf("Error\n");
 				return (1);
@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
 int isNumber(char *input[])
 {
 	int x = *input[0];
+	
 	if ((x >= 48 && x <= 57))
 		return (0);
 
