@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 		if (isLetter(argv[i]))
 		{
 			printf("Error\n");
-			return (EXIT_FAILURE);
+			return (1);
 		}
 		else
 		{
