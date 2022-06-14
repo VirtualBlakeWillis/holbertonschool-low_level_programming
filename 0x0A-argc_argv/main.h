@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 /* Project Prototypes */
-
+int isLetter(char *input);
 
 
 #endif
