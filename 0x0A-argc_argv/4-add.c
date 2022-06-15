@@ -22,31 +22,12 @@ int main(int argc, char *argv[])
 					printf("Error\n");
 					return (1);
 				}
-				else
-				{
-					tempInt = atoi(argv[i]);
-					sum += tempInt;
-				}
 			}
+			tempInt = atoi(argv[i]);
+			sum += tempInt;
 		}
 	}
 
 	printf("%d\n", sum);
 	return (EXIT_SUCCESS);
-}
-
-/**
-  * isNumber - checks if input is a number
-  * @input: input char
-  * Return: 1 if letter, 0 if not
-  */
-
-int isNumber(char *input[])
-{
-	int x = *input[0];
-	
-	if ((x >= 48 && x <= 57))
-		return (0);
-
-	return (1);
 }
