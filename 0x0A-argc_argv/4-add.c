@@ -9,21 +9,24 @@
 
 int main(int argc, char *argv[])
 {
-	int tempInt = 0, sum = 0, i;
+	int tempInt = 0, sum = 0, i, n;
 
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; ++i)
 		{
-			if (isNumber(&argv[i]) == 1)
+			for (n = 0; argv[i][n]; ++n)
 			{
-				printf("Error\n");
-				return (1);
-			}
-			else
-			{
-				tempInt = atoi(argv[i]);
-				sum += tempInt;
+				if (!isdigit(argv[i][n]))
+				{
+					printf("Error\n");
+					return (1);
+				}
+				else
+				{
+					tempInt = atoi(argv[i]);
+					sum += tempInt;
+				}
 			}
 		}
 	}
