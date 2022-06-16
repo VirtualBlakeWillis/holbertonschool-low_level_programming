@@ -1,0 +1,36 @@
+#include "main.h"
+/**
+  * create_array - creates an array of size, and fills with c
+  * @size: size of array
+  * @c: character to put in every memory space
+  * Return: pointer to array, or NULL
+  */
+char *_strdup(char *str)
+{
+	char *s;
+	unsigned int i, size;
+
+	if (str == NULL)
+		return (NULL);
+
+	size = 0;
+	while(str[size])
+		size++;
+
+
+	s = malloc((size) * sizeof(char));
+	
+	if (s == NULL)
+		return (NULL);
+
+	i = 0;
+	while (i < size)
+	{
+		s[i] = str[i];
+		i++;
+	}
+
+	return (s);
+
+}
+
