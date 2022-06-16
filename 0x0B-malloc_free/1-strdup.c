@@ -1,8 +1,7 @@
 #include "main.h"
 /**
-  * create_array - creates an array of size, and fills with c
-  * @size: size of array
-  * @c: character to put in every memory space
+  * _strdup - duplicate input to new string
+  * @str: input string
   * Return: pointer to array, or NULL
   */
 char *_strdup(char *str)
@@ -14,12 +13,12 @@ char *_strdup(char *str)
 		return (NULL);
 
 	size = 0;
-	while(str[size])
+	while (str[size])
 		size++;
 
 
 	s = malloc((size + 1) * sizeof(char));
-	
+
 	if (s == NULL)
 		return (NULL);
 
