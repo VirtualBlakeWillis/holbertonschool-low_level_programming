@@ -12,10 +12,10 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i = 0, x = 0, z = 0, str_len;
 	char *p;
 
-	while (s1[i])
+	while (s1[i] != '\0')
 		i++;
 
-	while (s2[x])
+	while (s2[x] != '\0')
 		x++;
 
 	str_len = i + x + 1;
