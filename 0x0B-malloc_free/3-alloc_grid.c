@@ -1,7 +1,10 @@
 #include "main.h"
 
 /**
-  *
+  * alloc_grid - allocates a grid in memory
+  * @height: height of grid
+  * @width: width of grid
+  * Return: pointer to grid[0][0]
   */
 
 int **alloc_grid(int width, int height)
