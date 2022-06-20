@@ -25,8 +25,6 @@ char *str_concat(char *s1, char *s2)
 
 	str_len = i + x + 1;
 
-	printf("%d\n", str_len);
-
 	p = malloc(str_len * sizeof(char));
 	
 	if (p == NULL)
