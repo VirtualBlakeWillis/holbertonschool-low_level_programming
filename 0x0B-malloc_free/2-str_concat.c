@@ -12,15 +12,23 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i = 0, x = 0, z = 0, str_len;
 	char *p;
 
-	while (s1[i] != '\0')
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	
+	while (s1[i])
 		i++;
 
-	while (s2[x] != '\0')
+	while (s2[x])
 		x++;
 
 	str_len = i + x + 1;
 
+	printf("%d\n", str_len);
+
 	p = malloc(str_len * sizeof(char));
+	
 	if (p == NULL)
 		return (NULL);
 
