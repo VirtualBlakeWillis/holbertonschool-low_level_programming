@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-  * _calloc - 
-  * @nmemb:
-  * @size:
-  * Return:
+  * _calloc - allocate space, initalize all memory in space 
+  * @nmemb: Number of array elements
+  * @size: sizeof element
+  * Return: pointer
   */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -21,7 +21,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (ptr == NULL)
 		return (NULL);
 
-	while (i < (int)nmemb)
+	while (i < (int)(nmemb * size))
 	{
 		ptr[i] = 0;
 		i++;
