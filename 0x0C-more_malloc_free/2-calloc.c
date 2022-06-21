@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * _calloc - allocate space, initalize all memory in space 
+  * _calloc - allocate space, initalize all memory in space
   * @nmemb: Number of array elements
   * @size: sizeof element
   * Return: pointer
