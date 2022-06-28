@@ -22,6 +22,7 @@ void print_strings(const char *sep, const unsigned int n, ...)
 
 		if (myStr == NULL)
 			myStr = "(nil)";
+
 		printf("%s%s", myStr, sep);
 	}
 	printf("%s\n", va_arg(ap, char *));
