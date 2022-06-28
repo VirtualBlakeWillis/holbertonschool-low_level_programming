@@ -13,7 +13,14 @@ void print_strings(const char *sep, const unsigned int n, ...)
 	va_list ap;
 	char *myStr;
 
+	if (sep == NULL)
+		sep = "";
 
+	if (n == 0)
+	{
+		putchar('\n');
+		return;
+	}
 	va_start(ap, n);
 
 	for (i = 0; i < (int)(n - 1); i++)
