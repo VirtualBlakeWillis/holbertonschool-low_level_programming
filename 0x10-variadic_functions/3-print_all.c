@@ -10,16 +10,16 @@ void print_all(const char * const format, ...)
 {
 	int i;
 	va_list ap;
-	char *seg = ", ";
-	char *tmpStr = "";
+	char *seg = ", ", *tmpStr;
 
 	va_start(ap, format);
-
-	if (format[i + 1] == '\0')
-		seg = "";
 	i = 0;
+
+
 	while (format != NULL && format[i] != '\0')
 	{
+		if (format[i + 1] == '\0')
+			seg = "";
 		
 		switch (format[i])
 		{
