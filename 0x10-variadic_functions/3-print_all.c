@@ -10,17 +10,17 @@ void print_all(const char * const format, ...)
 {
 	int i;
 	va_list ap;
-	char * seg = ", ";
+	char *seg = ", ";
 	char *tmpStr = "";
 
 	va_start(ap, format);
 
+	if (format[i + 1] == '\0')
+		seg = "";
 	i = 0;
-	while (format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
-		if (format[i + 1] == '\0')
-			seg = "";
-
+		
 		switch (format[i])
 		{
 			case 'c':
@@ -41,6 +41,7 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
+
 	printf("\n");
 	va_end(ap);
 }
