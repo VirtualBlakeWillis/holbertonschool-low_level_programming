@@ -14,11 +14,12 @@ void print_numbers(const char *sep, const unsigned int n, ...)
 
 	if (sep == NULL)
 		sep = "";
-	if (n <= 0)
+	if (n == 0)
 	{
-		printf('\n');
+		putchar('\n');
 		return;
 	}
+
 	va_start(ap, n);
 
 	for (i = 0; i < (n - 1); i++)
