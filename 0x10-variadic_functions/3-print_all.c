@@ -8,31 +8,39 @@
 
 void print_all(const char * const format, ...)
 {
-	int i, last = strlen(format);
+	int i;
 	va_list ap;
-	char formList[] = {'c', 'i', 'f', 's'};
+	char * seg = ", ";
+	char *tmpStr = "";
+
 	va_start(ap, format);
 
 	i = 0;
-	while (i < last)
+	while (format[i] != '\0')
 	{
+		if (format[i + 1] == '\0')
+			seg = "";
 
-		switch ((format + i))
+		switch (format[i])
 		{
 			case 'c':
-				printf("%s, ", va_arg(ap, char *));
+				printf("%c%s", va_arg(ap, int), seg);
 				break;
 			case 'i':
-				printf("%d, ", va_arg(ap, int));
+				printf("%d%s", va_arg(ap, int), seg);
 				break;
 			case 'f':
-				printf("%f, ", va_arg(ap, double));
+				printf("%f%s", va_arg(ap, double), seg);
 				break;
 			case 's':
-				printf("%s, ", va_arg(ap, char*));
+				tmpStr = va_arg(ap, char*);
+				if (tmpStr == NULL)
+					tmpStr = "(nil)";
+				printf("%s%s", tmpStr, seg);
 				break;
-
 		}
 		i++;
 	}
+	printf("\n");
+	va_end(ap);
 }
