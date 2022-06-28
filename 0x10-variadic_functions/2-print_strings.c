@@ -32,8 +32,9 @@ void print_strings(const char *sep, const unsigned int n, ...)
 
 		printf("%s%s", myStr, sep);
 	}
+	myStr = va_arg(ap, char *);
 	if (myStr == NULL)
 		myStr = "(nil)";
-	printf("%s\n", va_arg(ap, char *));
+	printf("%s\n", myStr);
 	va_end(ap);
 }
