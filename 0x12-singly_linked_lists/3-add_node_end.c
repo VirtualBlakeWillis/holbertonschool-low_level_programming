@@ -17,14 +17,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->len = strlen(str);
 
 	if (*head == NULL)
-	{
 		*head = new;
-	}
 	else
 	{
 		while (temp->next)
 			temp = temp->next;
 		temp->next = new;
 	}
+
 	return (new);
 }
