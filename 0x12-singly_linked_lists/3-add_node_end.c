@@ -1,7 +1,10 @@
 #include "lists.h"
 
 /**
- * 
+ * add_node_end - add a node to the end of a singly linked list
+ * @head: pointer to first node
+ * @str: string to populate new node
+ * Return: pointer to new node
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
