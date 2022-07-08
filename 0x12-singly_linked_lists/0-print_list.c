@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * print_list - prints a singly linked list
- * @h: first pointer (head)
- * Return: # of elements printed
- */
+  * print_list - prints a singly linked list
+  * @h: first pointer (head)
+  * Return: # of elements printed
+  */
 
 size_t print_list(const list_t *h)
 {
