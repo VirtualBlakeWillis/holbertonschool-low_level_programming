@@ -1,7 +1,9 @@
 #include "main.h"
 #include "_pow.c"
 /**
- *
+ * binary_to_uint - convert binary string to base 10 number
+ * @b: input string of binary chars
+ * Return: base 10 number, or 0
  */
 
 unsigned int binary_to_uint(const char *b)
@@ -26,5 +28,5 @@ unsigned int binary_to_uint(const char *b)
 		i++;
 	}
 
-	return(total);
+	return (total);
 }
