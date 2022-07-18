@@ -1,7 +1,10 @@
 #include "main.h"
 
 /**
- *
+ * read_textfile - read content of a file to standard output
+ * @filename: name of file
+ * @letters: num of letters to print
+ * Return: # of letters printed, or 0 if func fails
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -10,7 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buf;
 
 	buf = malloc(letters * sizeof(char));
-	
+
 	if (buf == NULL || filename == NULL)
 		return (0);
 
