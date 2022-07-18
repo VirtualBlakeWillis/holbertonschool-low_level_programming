@@ -15,6 +15,12 @@ int append_text_to_file(const char *fn, char *text)
 	if (fd < 0)
 		return (-1);
 
+	if (text == NULL)
+	{
+		close(fd);
+		return (1);
+	}
+
 	text_len = strlen(text);
 	if (write(fd, text, text_len) < 0)
 	{
