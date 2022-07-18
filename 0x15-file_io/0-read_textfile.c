@@ -7,39 +7,43 @@
  * Return: # of letters printed, or 0 if func fails
  */
 
-ssize_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile(const char *fn, size_t letr)
 {
-	int c = letters, fd, temp;
-	char *buf;
-
-	buf = malloc(c * sizeof(char));
-
-	if (buf == NULL || filename == NULL)
-	{
-		free(buf);
+	int fd, count;
+	char *buff;
+	if (fn == NULL)
 		return (0);
-	}
-	fd = open(filename, O_RDONLY);
 
-	if (fd == -1)
+	buff = malloc(letr * sizeof(char));
+	fd = open(fn, O_RDONLY);
+
+	if (buff == NULL)
 	{
 		close(fd);
 		return (0);
 	}
-	c = read(fd, buf, letters);
-	if (c < 0)
+	if (fd < 0)
 	{
-		free(buf);
+		free(buff);
 		return (0);
 	}
-	temp = write(1, buf, c);
-	if (temp < 0)
+
+	count = read(fd, buff, letr);
+	if (count < 0)
 	{
+		free(buff);
 		close(fd);
-		free(buf);
 		return (0);
 	}
 	close(fd);
-	free(buf);
-	return (temp);
+	count = write(STDOUT_FILENO, buff, count);
+	if (count < 0)
+	{
+		free(buff);
+		close(fd);
+	}
+
+	close(fd);
+	free(buff);
+	return (count);
 }
