@@ -14,7 +14,7 @@ int create_file(const char *fn, char *text)
 	if (text == NULL)
 		text = "";
 
-	fd = open(fn, O_CREAT | O_RDWR, 0600);
+	fd = open(fn, O_CREAT | O_RDWR | O_TRUNC, 0600);
 
 	if (fd < 0)
 		return (-1);
