@@ -2,8 +2,8 @@
 
 /**
  * read_textfile - read content of a file to standard output
- * @filename: name of file
- * @letters: num of letters to print
+ * @fn: name of file
+ * @letr: num of letters to print
  * Return: # of letters printed, or 0 if func fails
  */
 
@@ -11,6 +11,7 @@ ssize_t read_textfile(const char *fn, size_t letr)
 {
 	int fd, count;
 	char *buff;
+
 	if (fn == NULL)
 		return (0);
 
