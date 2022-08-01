@@ -1,17 +1,16 @@
 #include "lists.h"
 
 /**
- * print_dlistint - print data in each node of list
+ * dlistint_len - return # of elements in list
  *
  * @h: head of list
  * Return: int
  */
-size_t print_dlistint(const dlistint_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 	int n = 0;
 	while (h)
 	{
-		printf("%d\n", h->n);
 		h = h->next;
 		n++;
 	}
