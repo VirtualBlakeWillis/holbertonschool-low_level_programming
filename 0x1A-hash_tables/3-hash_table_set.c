@@ -11,28 +11,24 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned int fail = 0, success = 1, i;
-	hash_node_t *new, *temp;
+	hash_node_t *new;
 
-	if (ht == NULL || key == NULL)
+	if (!ht || !key || !value)
 		return (fail);
+
 	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
 		return (fail);
 
-	i = key_index((unsigned char *)key, ht->size);
+	i = key_index((const unsigned char *)key, ht->size);
 
 	if (ht->array[i] == NULL)
-	{
 		new->next = NULL;
-	}
 	else
-	{
-		temp = ht->array[i];
-		new->next = temp;
-	}
+		new->next = ht->array[i];
 
 	ht->array[i] = new;
-	new->key = (char *)key;
+	new->key = strdup(key);
 	new->value = strdup(value);
 
 	return (success);
