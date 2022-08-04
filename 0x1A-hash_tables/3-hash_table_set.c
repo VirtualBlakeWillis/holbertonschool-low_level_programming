@@ -13,9 +13,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned int fail = 0, success = 1, i;
 	hash_node_t *new, *temp;
 
-	if (ht == NULL)
+	if (ht == NULL || key == NULL)
 		return (fail);
-
 	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
 		return (fail);
