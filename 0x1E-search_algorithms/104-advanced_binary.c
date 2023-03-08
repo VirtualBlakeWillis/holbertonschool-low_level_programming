@@ -27,7 +27,7 @@ int advanced_binary(int *array, size_t size, int value)
  */
 int recursive_binary_search(int *array, int left, int right, int value)
 {
-    int mid, i;
+    int mid = left + (right - left) / 2;
 
     if (!(right >= left))
         return -1;
@@ -36,8 +36,7 @@ int recursive_binary_search(int *array, int left, int right, int value)
 		return (right);
 
     printf("Searching in array: ");
-    print_array(array, left, right, (right - left));
-    mid = left + (right - left) / 2;
+    print_array(array, left, right);
 
     if (value <= array[mid])
         return (recursive_binary_search(array, left, mid, value));
@@ -51,9 +50,9 @@ int recursive_binary_search(int *array, int left, int right, int value)
  * @array: The array to be printed
  * @size: Number of elements in @array
  */
-void print_array(const int *array, int start, int end, size_t size)
+void print_array(const int *array, int start, int end)
 {
-    size_t i;
+    int i;
 
     i = start;
     while (array && i <= end)
