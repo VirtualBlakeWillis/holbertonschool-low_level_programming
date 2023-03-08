@@ -10,9 +10,9 @@
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-    if (array == NULL)
-        return (-1);
-    return (recursive_binary_search(array, 0, (int)size - 1, value));
+	if (array == NULL)
+		return (-1);
+	return (recursive_binary_search(array, 0, (int)size - 1, value));
 }
 
 /**
@@ -27,20 +27,20 @@ int advanced_binary(int *array, size_t size, int value)
  */
 int recursive_binary_search(int *array, int left, int right, int value)
 {
-    int mid = left + (right - left) / 2;
+	int mid = left + (right - left) / 2;
 
-    if (!(right >= left))
-        return -1;
+	if (!(right >= left))
+		return -1;
 
-    if (right == left && value == array[right])
+	if (right == left && value == array[right])
 		return (right);
 
-    printf("Searching in array: ");
-    print_array(array, left, right);
+	printf("Searching in array: ");
+	print_array(array, left, right);
 
-    if (value <= array[mid])
-        return (recursive_binary_search(array, left, mid, value));
-    return (recursive_binary_search(array, mid + 1, right, value));
+	if (value <= array[mid])
+		return (recursive_binary_search(array, left, mid, value));
+	return (recursive_binary_search(array, mid + 1, right, value));
 
 }
 
@@ -48,19 +48,20 @@ int recursive_binary_search(int *array, int left, int right, int value)
  * print_array - Prints an array of integers
  *
  * @array: The array to be printed
- * @size: Number of elements in @array
+ * @start: starting index
+ * @end: end index
  */
 void print_array(const int *array, int start, int end)
 {
-    int i;
+	int i;
 
-    i = start;
-    while (array && i <= end)
-    {
-        if (i > start)
-            printf(", ");
-        printf("%d", array[i]);
-        ++i;
-    }
-    printf("\n");
+	i = start;
+	while (array && i <= end)
+	{
+		if (i > start)
+			printf(", ");
+		printf("%d", array[i]);
+		++i;
+	}
+	printf("\n");
 }
