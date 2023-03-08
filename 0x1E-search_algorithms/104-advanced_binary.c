@@ -30,7 +30,7 @@ int recursive_binary_search(int *array, int left, int right, int value)
 	int mid = left + (right - left) / 2;
 
 	if (!(right >= left))
-		return -1;
+		return (-1);
 
 	if (right == left && value == array[right])
 		return (right);
