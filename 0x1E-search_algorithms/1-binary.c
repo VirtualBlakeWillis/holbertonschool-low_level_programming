@@ -12,31 +12,31 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-    int left, right, middle;
+	int left, right, middle;
 
-    if (array == NULL)
-        return (-1);
+	if (array == NULL)
+		return (-1);
 
-    left = 0;
-    right = size - 1;
-    while (left <= right) {
-        printf("Searching in array: ");
-        print_array(array, left, right);
-        middle = floor((left + right) / 2);
-        if (array[middle] < value)
-        {
-            left = middle + 1;
-        }
-        else if (array[middle] > value)
-        {
-            right = middle - 1;
-        }
-        else
-        {
-            return (middle);
-        }
-    }
-    return (-1);
+	left = 0;
+	right = size - 1;
+	while (left <= right) {
+		printf("Searching in array: ");
+		print_array(array, left, right);
+		middle = floor((left + right) / 2);
+		if (array[middle] < value)
+		{
+			left = middle + 1;
+		}
+		else if (array[middle] > value)
+		{
+			right = middle - 1;
+		}
+		else
+		{
+			return (middle);
+		}
+	}
+	return (-1);
 }
 /**
  * print_array - Prints an array of integers
